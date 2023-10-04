@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 for i in range(25, -1, -1):
     if (i % 2 == 0):
-        print(chr(ord('A') + i), end="")
+        c = chr(ord('A') + i)
     else:
-        print(chr(ord('a') + i), end="")
+        c = chr(ord('a') + i)
+    print(c, end="")
