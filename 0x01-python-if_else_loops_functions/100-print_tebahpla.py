@@ -4,4 +4,4 @@ for i in range(25, -1, -1):
         c = chr(ord('A') + i)
     else:
         c = chr(ord('a') + i)
-    print(c, end="")
+    print("{}".format(c), end="")
