@@ -8,18 +8,18 @@
 */
 int is_palindrome(listint_t **head)
 {
-	int arr[1024];
-	listint_t *tmp;
+	int arr[2048];
+	listint_t *slow;
 	short i = 0, j = 0;
 
 	if (!head || !*head || !(*head)->next)
 		return (1);
-	tmp = *head;
-	arr[i++] = tmp->n;
-	arr[i++] = tmp->next->n;
-	tmp = tmp->next;
-	while ((tmp = tmp->next))
-		arr[i++] = tmp->n;
+	slow = *head;
+	arr[i++] = slow->n;
+	arr[i++] = slow->next->n;
+	slow = slow->next;
+	while ((slow = slow->next))
+		arr[i++] = slow->n;
 	while (j != i)
 		if (arr[j++] != arr[--i])
 			return (0);
