@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp;
 	short i = 0, j = 0;
 
-	if (!*head || !(*head)->next)
+	if (!head || !*head || !(*head)->next)
 		return (1);
 	tmp = *head;
 	arr[i++] = tmp->n;
@@ -20,8 +20,8 @@ int is_palindrome(listint_t **head)
 	tmp = tmp->next;
 	while ((tmp = tmp->next))
 		arr[i++] = tmp->n;
-	while (j != i)
-		if (arr[j++] != arr[--i])
+	while (j != --i)
+		if (arr[j++] != arr[i++])
 			return (0);
 	return (1);
 }
