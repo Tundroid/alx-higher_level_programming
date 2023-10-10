@@ -9,17 +9,17 @@
 int is_palindrome(listint_t **head)
 {
 	int arr[2048];
-	listint_t *slow;
+	listint_t *tmp;
 	short i = 0, j = 0;
 
-	if (!head || !*head || !(*head)->next)
+	if (!*head || !(*head)->next)
 		return (1);
-	slow = *head;
-	arr[i++] = slow->n;
-	arr[i++] = slow->next->n;
-	slow = slow->next;
-	while ((slow = slow->next))
-		arr[i++] = slow->n;
+	tmp = *head;
+	arr[i++] = tmp->n;
+	arr[i++] = tmp->next->n;
+	tmp = tmp->next;
+	while ((tmp = tmp->next))
+		arr[i++] = tmp->n;
 	while (j != i)
 		if (arr[j++] != arr[--i])
 			return (0);
