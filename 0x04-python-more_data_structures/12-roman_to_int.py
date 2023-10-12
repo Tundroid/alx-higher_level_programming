@@ -7,4 +7,4 @@ def roman_to_int(roman_string):
                         'M': 1000}
         for char in roman_string:
             sum += rom_numerals[char]
-        return sum
+    return sum
