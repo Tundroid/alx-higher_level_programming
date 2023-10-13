@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
             right = rom_numerals[roman_string[i]]
             sum += right
             i -= 1
-            if i > 0:
+            if i >= 0:
                 left = rom_numerals[roman_string[i]]
                 sum += -left if right > left else left
                 i -= 1
