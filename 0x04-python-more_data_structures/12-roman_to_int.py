@@ -5,6 +5,13 @@ def roman_to_int(roman_string):
         rom_numerals = {'I': 1, 'V': 5, 'X': 10,
                         'L': 50, 'C': 100, 'D': 500,
                         'M': 1000}
-        for char in roman_string:
-            sum += rom_numerals[char]
+        i = len(roman_string) - 1
+        while i >= 0:
+            right = rom_numerals[roman_string[i]]
+            sum += right
+            i -= 1
+            if i > 0:
+                left = rom_numerals[roman_string[i]]
+                sum += -left if right > left else left
+                i -= 1
     return sum
