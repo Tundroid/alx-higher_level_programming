@@ -30,4 +30,4 @@ class Square:
     @size.setter
     def size(self, value):
         """Property to set size"""
-        self.__init__(self, value)
+        self.__init__(value)
