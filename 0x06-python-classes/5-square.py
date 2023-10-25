@@ -30,11 +30,17 @@ class Square:
     @size.setter
     def size(self, value):
         """Property to set size"""
-        self.__init__(value)
+        if type(value) is int:
+            if value >= 0:
+                self.__size = value
+            else:
+                raise ValueError('size must be >= 0')
+        else:
+            raise TypeError('size must be an integer')
 
     def my_print(self):
         """Print square using # symbols"""
         if (not self.size):
             print()
-        for i in range(self.__size):
-            print("#" * self.__size)
+        for i in range(self.size):
+            print("#" * self.size)
