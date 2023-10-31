@@ -21,7 +21,7 @@ class Rectangle:
 
         if type(height) is int:
             if height >= 0:
-                self.__height= height
+                self.__height = height
             else:
                 raise ValueError('height must be >= 0')
         else:
