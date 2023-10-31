@@ -66,3 +66,11 @@ class Rectangle:
         if not self.width or not self.height:
             return 0
         return (self.width + self.height) * 2
+
+    def __str__(self):
+        s = ''
+        for i in range(self.height):
+            for j in range(self.width):
+                s += '#'
+            s += '\n'
+        return s
