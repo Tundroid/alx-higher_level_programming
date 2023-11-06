@@ -12,4 +12,5 @@ class Square(Rectangle):
         Args:
             size (int): size of square
         """
+        self.integer_validator("size", size)
         super().__init__(size, size)
