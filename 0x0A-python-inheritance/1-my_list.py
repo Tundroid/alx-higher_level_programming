@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Define a MyList class."""
+"""
+contains the MyList class
+"""
 
 
 class MyList(list):
-    """Blueprint a MyList inheriting from list."""
+    """a subclass of list"""
     def __init__(self):
         """initializes the object"""
         super().__init__()
