@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines function that returns JSON representation of a class"""
-import json
 
 
 def class_to_json(obj):
