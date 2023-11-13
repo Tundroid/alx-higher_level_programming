@@ -42,37 +42,46 @@ class Rectangle(base.Base):
 
     @property
     def width(self):
+        """Gets the width"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """Gets the width"""
         self.__width = self.validateWH("width", width)
 
     @property
     def height(self):
+        """Gets the width"""
         return self.__height
 
     @height.setter
     def height(self, height):
+        """Gets the width"""
         self.__height = self.validateWH("height", height)
 
     @property
     def x(self):
+        """Gets the width"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """Gets the width"""
         self.__x = self.validateXY("x", x)
 
     @property
     def y(self):
+        """Gets the width"""
         return self.__y
 
     @y.setter
     def y(self, y):
+        """Gets the width"""
         self.__y = self.validateXY("y", y)
 
     def area(self):
+        """Gets the width"""
         return self.height * self.width
 
     def display(self):
