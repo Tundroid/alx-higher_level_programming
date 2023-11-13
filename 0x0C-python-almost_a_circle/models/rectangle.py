@@ -45,7 +45,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        """Gets the width"""
         self.__width = self.validateWH("width", width)
 
     @property
@@ -55,7 +54,6 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        """Gets the width"""
         self.__height = self.validateWH("height", height)
 
     @property
@@ -65,7 +63,6 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        """Gets the width"""
         self.__x = self.validateXY("x", x)
 
     @property
@@ -75,7 +72,6 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
-        """Gets the width"""
         self.__y = self.validateXY("y", y)
 
     def area(self):
