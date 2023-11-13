@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""Base Class"""
 import json
 import csv
 
 
 class Base:
-    """Base Class"""
     __nb__objects = 0
 
     def __init__(self, id=None):
