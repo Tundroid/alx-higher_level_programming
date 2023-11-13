@@ -5,6 +5,8 @@ from models import base
 
 class Rectangle(base.Base):
     """Rectangle Class"""
+
+
     def validateWH(self, var, val):
         if type(val) is int:
             if val > 0:
