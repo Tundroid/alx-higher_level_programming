@@ -13,6 +13,10 @@ if __name__ == "__main__":
 
     list_rectangles_output = Rectangle.load_from_file_csv()
 
+    print(type(list_rectangles_output))
+    print(type(list_rectangles_output[0]))
+    print(list_rectangles_output[0].width)
+
     for rect in list_rectangles_input:
         print("[{}] {}".format(id(rect), rect))
 

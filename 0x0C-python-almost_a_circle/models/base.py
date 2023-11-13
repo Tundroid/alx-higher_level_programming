@@ -75,18 +75,10 @@ class Base:
                       "r", encoding="utf8") as file:
                 column_order = [['id', 'width', 'height', 'x', 'y']]
                 column_order.append(['id', 'size', 'x', 'y'])
-                int_cols = ['id', 'width', 'height', 'size', 'x', 'y']
                 use = column_order[0 if cls.__name__ == "Rectangle" else 1]
                 reader = csv.DictReader(file, fieldnames=use)
-
-                for col in int_cols:
-                    reader.fieldtypes[col] = int
-                for row in reader:
-                    print(type(row))
-                    print(row)
-                exit()
-                ls.append(cls.create(**row))
-
-                # ls = [cls.create(**obj) for obj in reader]
+                reader = [dict([k, int(v)] for k, v in d.items())
+                          for d in reader]
+                ls = [cls.create(**obj) for obj in reader]
         finally:
-            ls
+            return ls
