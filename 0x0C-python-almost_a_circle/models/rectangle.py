@@ -73,3 +73,48 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         self.__y = self.validateXY("y", y)
+
+    def area(self):
+        """Gets the width"""
+        return self.height * self.width
+
+    def display(self):
+        s = ''
+        s += '\n' * self.y
+        for i in range(self.height):
+            s += ' ' * self.x
+            s += '#' * self.width
+            if i != self.height - 1:
+                s += '\n'
+        print(s)
+
+    def __str__(self):
+        return "[{}] ({}) {}/{} - {}/{}".format(
+                                                self.__class__.__name__,
+                                                self.id,
+                                                self.x, self.y, self.width,
+                                                self.height
+                                            )
+
+    def update(self, *args, **kwargs):
+        if args:
+            self.id = args[0] if len(args) > 0 else self.id
+            self.width = args[1] if len(args) > 1 else self.width
+            self.height = args[2] if len(args) > 2 else self.height
+            self.x = args[3] if len(args) > 3 else self.x
+            self.y = args[4] if len(args) > 4 else self.y
+
+        if kwargs:
+            keys = set(kwargs.keys())
+            self.id = kwargs["id"] if "id" in keys else self.id
+            self.width = kwargs["width"] if "width" in keys else self.width
+            self.height = kwargs["height"] if "height" in keys else self.height
+            self.x = kwargs["x"] if "x" in keys else self.x
+            self.y = kwargs["y"] if "y" in keys else self.y
+
+    def to_dictionary(self):
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width}
