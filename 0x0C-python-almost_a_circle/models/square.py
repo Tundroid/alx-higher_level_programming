@@ -12,6 +12,7 @@ class Square(rectangle.Rectangle):
 
     @property
     def size(self):
+        """Square Class"""
         return self.width
 
     @size.setter
@@ -19,6 +20,7 @@ class Square(rectangle.Rectangle):
         self.width = self.height = self.validateWH("width", size)
 
     def update(self, *args, **kwargs):
+        """Square Class"""
         if args:
             self.id = args[0] if len(args) > 0 else self.id
             self.size = args[1] if len(args) > 1 else self.size
@@ -33,6 +35,7 @@ class Square(rectangle.Rectangle):
             self.y = kwargs["y"] if "y" in keys else self.y
 
     def __str__(self):
+        """Square Class"""
         return "[{}] ({}) {}/{} - {}".format(
                                                 self.__class__.__name__,
                                                 self.id,
