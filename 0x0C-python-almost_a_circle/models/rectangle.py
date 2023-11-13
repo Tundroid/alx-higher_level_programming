@@ -79,6 +79,7 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
+        """Display polygon"""
         s = ''
         s += '\n' * self.y
         for i in range(self.height):
