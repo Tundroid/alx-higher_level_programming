@@ -73,3 +73,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         self.__y = self.validateXY("y", y)
+
+    def area(self):
+        """Gets the width"""
+        return self.height * self.width
