@@ -88,3 +88,12 @@ class Rectangle(Base):
             if i != self.height - 1:
                 s += '\n'
         print(s)
+
+    def __str__(self):
+        """Modify str"""
+        return "[{}] ({}) {}/{} - {}/{}".format(
+                                                self.__class__.__name__,
+                                                self.id,
+                                                self.x, self.y, self.width,
+                                                self.height
+                                            )
