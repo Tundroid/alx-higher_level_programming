@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 """Square Class"""
-from models import rectangle
+from models.rectangle import Rectangle
 
 
-class Square(rectangle.Rectangle):
+class Square(Rectangle):
     """Square Class"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
+        """Initialize a new Square.
 
         Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-            x (int): The x coordinate of the new Rectangle.
-            y (int): The y coordinate of the new Rectangle.
-            id (int): The identity of the new Rectangle.
+            size (int): The size of the new Square.
+            x (int): The x coordinate of the new Square.
+            y (int): The y coordinate of the new Square.
+            id (int): The identity of the new Square.
         """
         super().__init__(size, size, x, y, id)
 
