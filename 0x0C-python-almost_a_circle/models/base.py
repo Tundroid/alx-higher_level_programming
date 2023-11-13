@@ -51,7 +51,6 @@ class Base:
             with open(cls.__name__ + ".json",
                       "r", encoding="utf8") as file:
                 list_dicts = Base.from_json_string(file.read())
-                print('skfn - ', list_dicts[0])
                 ls = [cls.create(**obj) for obj in list_dicts]
         finally:
             return ls
