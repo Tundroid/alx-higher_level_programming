@@ -40,17 +40,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantied from a dictionary of attributes.
-
-        Args:
-            **dictionary (dict): Key/value pairs of attributes to initialize.
-        """
-        # if cls.__name__ == "Rectangle":
-        new = cls(1, 1)
-        # else:
-        # new = cls(1)
-        new.update(**dictionary)
-        return new
+        obj = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
+        obj.update(**dictionary)
+        return obj
 
     @classmethod
     def load_from_file(cls):
