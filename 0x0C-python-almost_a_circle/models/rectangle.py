@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Rectanlge Class"""
-from models import base
+from models.base import Base
 
 
-class Rectangle(base.Base):
+class Rectangle(Base):
     """Rectangle Class"""
 
     def validateWH(self, var, val):
