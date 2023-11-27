@@ -5,7 +5,7 @@
 class Rectangle:
     """Represent a Rectangle."""
 
-    number_of_instance = 0
+    number_of_instances = 0
 
     def validate(value, name):
         """Validator function"""
@@ -26,7 +26,7 @@ class Rectangle:
         """
         self.__width = Rectangle.validate(width, "width")
         self.__height = Rectangle.validate(height, "height")
-        self.number_of_instance += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -68,4 +68,4 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        self.number_of_instance -= 1
+        Rectangle.number_of_instances -= 1
