@@ -79,6 +79,6 @@ class Rectangle:
                     return rect_1
                 return rect_2
             else:
-                raise TypeError("rec_2 must be an instance of Rectangle")
+                raise TypeError("rect_2 must be an instance of Rectangle")
         else:
-            raise TypeError("rec_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
