@@ -1,5 +1,5 @@
 -- Task 4
 CREATE TABLE IF NOT EXISTS first_table(
 	id INT,
-	name VARCHAR
+	name VARCHAR(256)
 );
