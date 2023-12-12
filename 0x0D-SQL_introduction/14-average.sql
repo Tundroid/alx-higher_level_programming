@@ -1,2 +1,2 @@
 -- Task 14
-SELECT AVERAGE(score) FROM second_table;
+SELECT AVERAGE(score) AS average FROM second_table;
