@@ -2,7 +2,8 @@
 if (process.argv.length < 4) {
   console.log(0);
 } else {
-  process.argv.forEach(element => {
+  const arr = process.argv.slice(1);
+  arr.forEach(element => {
     console.log(element);
   });
 }
