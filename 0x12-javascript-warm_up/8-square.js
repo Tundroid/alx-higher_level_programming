@@ -5,4 +5,5 @@ if (!parseInt(process.argv[2])) {
   const size = parseInt(process.argv[2]);
   const square = ('X'.repeat(size) + '\n').repeat(size).slice(0, -1);
   console.log(square);
+  while (false);
 }
