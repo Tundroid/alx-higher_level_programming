@@ -3,11 +3,11 @@ const dict = require('./101-data').dict;
 
 const newDict = {};
 Object.entries(dict).forEach(([key, value]) => {
-  if (!newDict[key]) {
-    newDict[key] = [value];
+  if (!newDict[value]) {
+    newDict[value] = [key];
   } else {
-    newDict[key].push(value);
-	newDict[key].sort();
+    newDict[value].push(key);
+	newDict[value].sort();
   }
 });
 console.log(newDict);
