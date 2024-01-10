@@ -7,7 +7,9 @@ Object.entries(dict).forEach(([key, value]) => {
     newDict[value] = [key];
   } else {
     newDict[value].push(key);
-    newDict[value].sort();
   }
+});
+Object.entries(newDict).forEach(([key, value]) => {
+  newDict[key].sort();
 });
 console.log(newDict);
