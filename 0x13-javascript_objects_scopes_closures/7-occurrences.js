@@ -4,7 +4,7 @@ exports.nbOccurences = function (list, query) {
   list.forEach(element => {
     if (element === query) {
       occurence++;
-	}
+    }
   });
   return occurence;
 };
