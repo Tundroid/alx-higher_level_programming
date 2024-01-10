@@ -11,7 +11,7 @@ class Square extends Rectangle {
       super.print();
     } else {
       const shape = (c.repeat(this.width) + '\n').repeat(this.height).slice(0, -1);
-	  console.log(shape);
+      console.log(shape);
     }
   }
 }
