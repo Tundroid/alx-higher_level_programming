@@ -6,4 +6,5 @@ exports.nbOccurences = function (list, query) {
       occurence++;
 	}
   });
+  return occurence;
 };
