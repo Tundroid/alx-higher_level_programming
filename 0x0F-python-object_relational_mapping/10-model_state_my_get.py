@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)()
     res = session.query(State).filter(State.name.like(sys.argv[4]))
     if res is None:
-        print("Nothing")
+        print("Not found")
     else:
         print("{}".format(res[0].id))
     session.close()
