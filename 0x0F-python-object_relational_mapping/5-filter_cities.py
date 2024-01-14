@@ -8,7 +8,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = conn.cursor()
     sql = "SELECT cities.id, cities.name, states.name FROM cities JOIN\
-                states on cities.state_id = states.id WHERE cities.name\
+                states on cities.state_id = states.id WHERE cities.name \
                 LIKE BINARY %s ORDER BY cities.id ASC"
     values = (sys.argv[4],)
     cur.execute(sql, values)
