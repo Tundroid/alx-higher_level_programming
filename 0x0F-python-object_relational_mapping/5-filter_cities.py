@@ -4,16 +4,16 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(host="localhost", user=sys.argv[1],
+    conn = MySQLdb.connect(host="172.19.128.1", user=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = conn.cursor()
-    sql = "SELECT cities.id, cities.name, states.name FROM cities JOIN\
-                states on cities.state_id = states.id WHERE cities.name \
+    sql = "SELECT cities.name FROM cities JOIN \
+                states on cities.state_id = states.id WHERE states.name \
                 LIKE BINARY %s ORDER BY cities.id ASC"
     values = (sys.argv[4],)
     cur.execute(sql, values)
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    list = [row[0] for row in query_rows]
+    print(*list, sep=", ")
     cur.close()
     conn.close()
