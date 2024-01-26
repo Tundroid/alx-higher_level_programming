@@ -9,6 +9,6 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    request = urllib.request.Request(sys.argv[1])
-    with urllib.request.urlopen(request) as response:
+    email = urllib.request.Request(sys.argv[1])
+    with urllib.request.urlopen(email) as response:
         print(dict(response.headers).get("X-Request-Id"))
